@@ -26,6 +26,12 @@ This lesson covers HTML syntax and element types.
 
 HTML stands for hyper text markup language. It has been in use since the advent of the internet. Every website you visit or interact with is built on or with HTML.
 
+If we think of a building, HTML is the actual architecture of the structure. How many stories will the building have? How many walls and doors do we need? 
+How much text and how many images will our site have? Once we have our building (webpage) structured out and created, we can begin working on its style (CSS) and then plugging it in and getting some functionality (Javascript)
+
+Another analogy is the human body: Javascript is the Brain and nerves that control our actions. CSS is the skin and hair that define how we look. HTML would be our skeleton that everything is built up on. 
+
+
 ## Creating A HTML File
 
 Inside of this lesson folder, create an `index.html` file. You can either do this in your terminal with `touch index.html` or with vscode's add file button located in your file explorer.
@@ -46,6 +52,9 @@ Open the `index.html` file you created. Once the file opens, type `!` and you sh
 
 **If emmet did not work for you, feel free to copy and paste the above code into your `index.html`.**
 
+This is known as "HTML Boilerplate" and it something you will see a variation of in every HTML file you find. Not all of it is necessary for each project you build - especially those "meta" tags, but as we build up more advanced sites which we can style, deploy to the web, and share, we will see what these do and what they are used for.
+
+
 ### Stop and Discuss 5 min
 
 Talking points:
@@ -56,6 +65,70 @@ Talking points:
 ## HTML Elements
 
 HTML is built with elements or `tags`. For example, the `body` tag is an element. HTML supports many different tags, all of which serve different purposes and uses.
+
+
+There are probably around 50-100 different HTML elements that exist, with new elements being developed every few seasons/years (iFrames, which allow us to embed Youtube and other video URLs into our page is just one example of a relatively modern one). There are some you will find that are outdated and have been replaced with more powerful elements. We will be doing a brief overview of some of these elements and their usage. The goal of this lesson is not to show you every single HTML tag, but rather to give you examples of some widely used ones, so that as you continue on your journey, you will be able to figure out and use any that you encounter.  
+
+
+As you can see, elements are wrapped in our angle bracers <> and are closed with a slash </>.
+Some require content to be placed within and then closed
+```
+<h1> I am an H1 tag </h1>
+<h2> I am a smaller H2 tag </h2>
+```
+
+While others, known as "Void Tags" are simply enclosed within themselves and do not need a second </> to close them off
+
+This tag tells the computer we are using a standard ASCII letters and the characters we are familiar with (!, #, $, &, etc). If we wanted to use Mandarin, Cyrillic, Kanji, or characters from any other language inside of our code, we might have to use some different charset tags (don't worry about this for now!)
+
+```
+<meta charset="UTF-8"/>
+
+```
+
+And of course, everyone's favorite, adding Images into our page. 
+
+```
+<img src="profilePicture.jpg" />
+```
+
+The most important rule to understand is that while some elements may be contained within others (known as nesting), they must be closed off before starting a separate set of elements.
+
+
+This is written correctly, and will work. Don't worry about the content yet, we'll discuss what these elements each do, but focus more on how we are structuring the elements.
+
+```
+<div>
+
+    <a href="www.google.com">
+      
+        <h3> Click here to go to Google! </h3>
+      
+   </a>
+
+</div>
+```
+
+
+Because our H3 is nested within the Anchor tag (a), it needs to be closed out before the Anchor is. Both of these have to be closed out before the Div is closed.
+
+
+What is wrong with this block of code here?
+
+```
+<div>
+
+  <a href="www.google.com">
+  
+      <h3> Click here to go to Google 
+      
+   </a>
+
+      </h3>
+      
+ </div>      
+ ```
+
 
 ### Block Elements
 
@@ -101,10 +174,19 @@ Examples of inline elements:
 
 For a full list of HTML elements visit [W3 Schools](https://www.w3schools.com/html/html_blocks.asp)
 
+  
+You will **not** be asked to memorize every single one of these tags, and there will not be any exams testing how many of these you know. Like songs on the guitar, or recipes to cook, the goal is not to weigh down your brain memorizing all of these, but rather, understanding how to find resources to use whenever you need to use a specific tag. 
+  
+
+But thats enough of an intro for now. Lets start writing some code! 
+
 ### Adding Content To Our Page
 
 Head over to your `index.html`. Let's start by adding a nav to our document. Inside of the `nav` tags, add in a `ul` tag followed by 2 `li` tags inside of the `ul`.
 The first `li` should contain the text `Home` and the second should contain the text `About`:
+
+
+A "ul" is an Unordered List. An "ol" will created an numerically ordered list. Nested within these we add our "li" elements, which will be the individual items of the list.
 
 ```html
 <!DOCTYPE html>
@@ -163,6 +245,7 @@ Add some content to your page! Here are the necessary requirements, but feel fre
 - Must have at least 1 `p` tag.
 - Must have at least 1 `section` tag.
 - The `section` must have 2 `div` tags inside of it.
+- Create an Ordered List, and add 2-3 different Li elements inside of it. Look how the computer will automatically serialize and style these lists for us!
 
 Feel free to add images if you finish early!
 
