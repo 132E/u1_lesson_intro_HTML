@@ -52,8 +52,7 @@ Open the `index.html` file you created. Once the file opens, type `!` and you sh
 
 **If emmet did not work for you, feel free to copy and paste the above code into your `index.html`.**
 
-This is known as "HTML Boilerplate" and it something you will see a variation of in every HTML file you find. Not all of it is necessary for each project you build - especially those "meta" tags, but as we build up more advanced sites which we can style, deploy to the web, and share, we will see what these do and what they are used for.
-
+This is known as "HTML Boilerplate" and it something you will see a variation of in every HTML file you find and work with
 
 ### Stop and Discuss 5 min
 
